@@ -10,13 +10,13 @@ int main(){
         cout << "3. KMA" << endl;
         cout << "4. VNU" << endl;
         cin >> selection;
-        if(cin.fail()){
-            cerr<<"Invalid input!"<<endl;
-            cin.clear();
-            cin.ignore(32767, '\n');
+        if(cin.fail()){                         // Đây là kiểm tra đầu vào
+            cerr<<"Invalid input!"<<endl;       // In ra nếu sai
+            cin.clear();                        // Xoá bộ nhớ
+            cin.ignore(32767, '\n');            // Xoá bộ nhớ
         }
     }
-    while(selection < 1 || selection > 4);
+    while(selection < 1 || selection > 4);      // lựa chọn
     switch(selection){
         case 1:
             cout << "Your selection: " << "HUST";
